@@ -1,0 +1,60 @@
+<head>
+    <title>creativitythroughcode</title> 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name = "about">
+    <body>
+		<div class = "top">
+
+				<img src = "http://theartmad.com/wp-content/uploads/2015/05/Baby-Winnie-The-Pooh-With-Honey-4.png">
+
+			<div>
+				<h1>Welcome to our page!</h1>
+				<p>DESCRIPTION!</p>
+			</div>
+		</div>
+		<div class = "container">
+			<div style="border-style:solid; background-color:white; text-align: center">
+				<h1 style= "font-weight: 100">Features </h1>
+			</div>
+            
+			<div class = "col-md-4" style = " border-style:solid; background-color: lightblue;">
+				<a href= "http://www.facebook.com" target="_blank"> <h2>Contacts</h2> </a>
+				<p> Description</p>
+			</div>
+		    <div class = "col-md-4" style = "border-style:solid; background-color: skyblue;">
+				<h2>Profile</h2>
+				<p> Description</p>
+            </div>
+			<div class = "col-md-4" style = "border-style:solid; background-color: cyan;">
+                <div class="col-md-6 col-md-offset-3">
+                 <img class= "img-responsive" src= "smiley.png">
+                </div>
+				<a href= "/gallery"><h2>Pictures</h2></a>
+				<p> Description</p>
+			</div>	
+		</div>
+	</body>
+</template>
+<template name = "gallery">
+    <h1>Gallery page</h1>
+    <p> Add pictures here</p>
+    
+</template>
+<template name="contact">
+  <div class="col-md-3">
+    <form action='https://www.getform.org/u/2ee00113-a7e8-4b6d-8ad0-323073f2ce09' enctype="multipart/form-data" method="POST"> 
+    <input type="text" class="form-control" placeholder= "name" name= "name">
+    <input type="email" class="form-control" placeholder= "email" name= "email">
+        <textarea class="form-control" rows="6" placeholder="message" name= "message"></textarea>
+    <button type="submit" class="btn">Submit</button>
+    </form>
+    </div>
+</template>
+      

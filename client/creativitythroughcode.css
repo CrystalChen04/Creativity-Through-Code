@@ -1,0 +1,35 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.top {
+    border-style:solid; 
+    background-image: url('https://images.unsplash.com/photo-1425036458755-dc303a604201?ixlib=rb-0.3.5&q=80&fm=jpg&w=1080&fit=max&s=b65fa25ae814087b2e6caa9a49d72326'); 
+    height: 50 vh; 
+    text-align: center;
+}
+.top img {
+    
+    height: 250px;
+    padding-top: 70;
+}
+.top div {
+    padding-top: 5px;
+}
+.top div h1{
+    margin-bottom: 20px; 
+    font-weight: 300; 
+    color: white;
+}
+.top div p {
+    color: white;
+}
+.content {
+    text-align: center;
+}
+
+
+@media (min-width:800px){  
+ .container{
+  width:1400px  
+}   
+}
