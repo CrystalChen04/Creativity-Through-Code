@@ -9,6 +9,7 @@
 </template>
 
 <template name = "about">
+    {{>navbar}}
     <body>
 		<div class = "top">
 
@@ -16,45 +17,122 @@
 
 			<div>
 				<h1>Welcome to our page!</h1>
-				<p>DESCRIPTION!</p>
+                <h2>DESCRIPTION!</h2>
 			</div>
 		</div>
-		<div class = "container">
-			<div style="border-style:solid; background-color:white; text-align: center">
-				<h1 style= "font-weight: 100">Features </h1>
+			<div style="background-color:white; text-align: center">
+				<h1 style= "font-weight: 100"> Features </h1>
 			</div>
-            
+        
+        	<div class = "container">
 			<div class = "col-md-4" style = " border-style:solid; background-color: lightblue;">
-				<a href= "http://www.facebook.com" target="_blank"> <h2>Contacts</h2> </a>
+				<a href= "http://www.facebook.com" target="_blank"> <h2>About Us</h2> </a>
 				<p> Description</p>
 			</div>
 		    <div class = "col-md-4" style = "border-style:solid; background-color: skyblue;">
-				<h2>Profile</h2>
+				<h2>Order</h2>
 				<p> Description</p>
             </div>
-			<div class = "col-md-4" style = "border-style:solid; background-color: cyan;">
-                <div class="col-md-6 col-md-offset-3">
-                 <img class= "img-responsive" src= "smiley.png">
+			<div class = "col-md-4" style = "border-style:solid; background-color: lightblue;">
+                <div class="col-md-6">
+				    <a href= "/gallery"><h2>Pictures</h2></a>
+				    <p> Description</p>
                 </div>
-				<a href= "/gallery"><h2>Picture1s</h2></a>
-				<p> Description</p>
+                <div class="col-md-6">
+                    <img class= "img-responsive" src= "smiley.png" style= "height:150px;">
+                </div>
 			</div>	
 		</div>
 	</body>
+    {{>footer}}
 </template>
 <template name = "gallery">
-    <h1>Gallery page</h1>
-    <p> Add pictures here</p>
-    
+    {{>navbar}}
+    <div>
+        <h1>Gallery page</h1>
+        <p> Here you can browse through the stuff</p>    
+    </div>
+    <div>
+        <div class= "col-md-4">
+            <h2>Picture 1</h2>
+        </div>
+        <div class= "col-md-4">
+            <h2>Picture 2</h2>
+        </div>
+        <div class= "col-md-4">
+            <h2>Picture 3</h2>  
+        </div>
+    </div>
+    {{>footer}}
 </template>
+<template name="order">
+   {{>navbar}}
+      <div class="container">
+          <div>
+            <h1> Hi</h1>
+          </div>
+        </div>
+    {{>footer}}
+ </template>
 <template name="contact">
+    {{>navbar}}
   <div class="col-md-3">
-    <form action='https://www.getform.org/u/2ee00113-a7e8-4b6d-8ad0-323073f2ce09' enctype="multipart/form-data" method="POST"> 
-    <input type="text" class="form-control" placeholder= "name" name= "name">
-    <input type="email" class="form-control" placeholder= "email" name= "email">
+    {{> contactform}}
+</div>
+     {{>footer}}
+</template>
+<template name="contactform">
+    <form action='https://www.getform.org/f/5aa5c267-659d-42bd-b81f-a239fefd8bad' method="POST">
+        <input type="text" class="form-control" placeholder= "name" name= "name">
+        <input type="email" class="form-control" placeholder= "email" name= "email">
         <textarea class="form-control" rows="6" placeholder="message" name= "message"></textarea>
     <button type="submit" class="btn">Submit</button>
     </form>
+</template>
+        
+<template name="navbar">
+    <nav>
+    <div class="col-md-1 col-md-offset-7">
+     <a href= "/"><h4>Home</h4></a> 
     </div>
+    <div class="col-md-1">
+    <a href= "/gallery">  <h4>Gallery</h4> </a>
+     </div>
+    <div class="col-md-1">
+     <a href="/order"><h4>Order</h4></a>
+    </div>  
+   <div class="col-md-2">
+     <a href="/contact"><h4>Contact Us</h4></a>
+    </div>
+    </nav>
+</template>
+
+<template name="footer">
+<footer>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="container">
+                <ul style="padding-bottom:20px">
+                    <a href="/"><li>Home</li> </a> 
+                    <a href="/gallery"><li>Gallery</li></a>
+                    <a href="/contact"><li>Contact Us</li></a>
+                    <a href="/order"><li>Order</li></a>
+                </ul>
+            </div>
+         </div>
+        
+     <div class="col-md-4">
+    <h4>About Us</h4> 
+    <p>To be determined. If its for MHA then promoting happiness and stuff. If JA then group of young kidds starting own business selling stuff and YEA! </p>
+    </div>   
+     <div class="col-md-4">
+       <div class="row">
+         <div class= "col-md-8 contact-form-footer">
+            {{>contactform}}
+             </div>
+        </div>
+     </div> 
+     </div>
+    </footer>
 </template>
       

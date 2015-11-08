@@ -12,3 +12,8 @@ Router.route('/contact', {
     template: 'contact',
     title: 'CTC - contact'
 });
+
+Router.route('/order', {
+    template: 'order',
+    title: 'CTC - order'
+});
