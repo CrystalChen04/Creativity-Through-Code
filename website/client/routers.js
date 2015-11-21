@@ -13,7 +13,7 @@ Router.route('/contact', {
     title: 'CTC - contact'
 });
 
-Router.route('/order', {
-    template: 'order',
-    title: 'CTC - order'
+Router.route('/messages', {
+    template: 'messages',
+    title: 'CTC - messages'
 });

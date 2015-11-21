@@ -16,33 +16,29 @@
 				<img src = "http://theartmad.com/wp-content/uploads/2015/05/Baby-Winnie-The-Pooh-With-Honey-4.png">
 
 			<div>
-				<h1>Welcome to our page!</h1>
-                <h2>DESCRIPTION!</h2>
+				<div class= "wow tada"><h1>Welcome to our page!</h1></div>
+           <h2>DESCRIPTION!</h2>
 			</div>
 		</div>
 			<div style="background-color:white; text-align: center">
 				<h1 style= "font-weight: 100"> Features </h1>
 			</div>
         
-        	<div class = "container">
-			<div class = "col-md-4" style = " border-style:solid; background-color: lightblue;">
-				<a href= "http://www.facebook.com" target="_blank"> <h2>About Us</h2> </a>
-				<p> Description</p>
-			</div>
-		    <div class = "col-md-4" style = "border-style:solid; background-color: skyblue;">
-				<h2>Order</h2>
-				<p> Description</p>
+      <div class = "container">
+			       <div class = "col-md-4 col-xs-6" style = " border-style:solid;">
+				           <h2>About Us</h2> 
+				          <p> Description</p>
+			       </div>
+		        <div class = "middle col-md-4 col-xs-6" style = "border-style:solid;"> <a href= "http://www.facebook.com" target="_blank"> <h2>Messages</h2></a>
+				          <p>Contact your friends within seconds!</p>
             </div>
-			<div class = "col-md-4" style = "border-style:solid; background-color: lightblue;">
-                <div class="col-md-6">
-				    <a href= "/gallery"><h2>Pictures</h2></a>
-				    <p> Description</p>
-                </div>
-                <div class="col-md-6">
-                    <img class= "img-responsive" src= "smiley.png" style= "height:150px;">
-                </div>
-			</div>	
-		</div>
+			       <div class = "col-md-4 col-xs-12" style = "border-style:solid;">
+				        <a href= "/gallery"><h2>Pictures</h2></a> 
+				        <p> Description <div>
+                <img class= "img-responsive-center" src= "smiley-face-emoji-1258187.gif" style= "height:150px; padding-top:20px;">
+                </div></p>
+			       </div>	
+		  </div>
 	</body>
     {{>footer}}
 </template>
@@ -50,7 +46,10 @@
     {{>navbar}}
     <div>
         <h1>Gallery page</h1>
-        <p> Here you can browse through the stuff</p>    
+        <p> Browse through your favourite pictures and relive your old memories!</p>    
+    </div>
+    <div class= "extra">
+     <h1> blablablablablablablablaskdajkshdjashdkashdwiejhgrhjewghjdsjfbnsdmfskasjdhjaksdjhwujewhbfsdnmfbdsjkjfhjsdkh</h1>
     </div>
     <div>
         <div class= "col-md-4">
@@ -65,7 +64,7 @@
     </div>
     {{>footer}}
 </template>
-<template name="order">
+<template name="messages">
    {{>navbar}}
       <div class="container">
           <div>
@@ -92,16 +91,16 @@
         
 <template name="navbar">
     <nav>
-    <div class="col-md-1 col-md-offset-7">
+    <div class="col-md-1 col-md-offset-7 col-xs-3">
      <a href= "/"><h4>Home</h4></a> 
     </div>
-    <div class="col-md-1">
+    <div class="col-md-1 col-xs-3">
     <a href= "/gallery">  <h4>Gallery</h4> </a>
      </div>
-    <div class="col-md-1">
-     <a href="/order"><h4>Order</h4></a>
+    <div class="col-md-1 col-xs-3">
+     <a href="/messages"><h4>Messages</h4></a>
     </div>  
-   <div class="col-md-2">
+   <div class="col-md-2 col-xs-3">
      <a href="/contact"><h4>Contact Us</h4></a>
     </div>
     </nav>
@@ -110,22 +109,22 @@
 <template name="footer">
 <footer>
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 col-xs-4">
             <div class="container">
                 <ul style="padding-bottom:20px">
                     <a href="/"><li>Home</li> </a> 
                     <a href="/gallery"><li>Gallery</li></a>
                     <a href="/contact"><li>Contact Us</li></a>
-                    <a href="/order"><li>Order</li></a>
+                    <a href="/messages"><li>Messages</li></a>
                 </ul>
             </div>
          </div>
         
-     <div class="col-md-4">
-    <h4>About Us</h4> 
-    <p>To be determined. If its for MHA then promoting happiness and stuff. If JA then group of young kidds starting own business selling stuff and YEA! </p>
+     <div class="col-md-4 col-xs-4">
+        <h4>About Us</h4> 
+         <p> INSERT NAME HERE is an online website where users are given the opportunity to connect with their friends, ask questions and document their experiences so that the memories created will last forever. </p>
     </div>   
-     <div class="col-md-4">
+     <div class="col-md-4 col-xs-4">
        <div class="row">
          <div class= "col-md-8 contact-form-footer">
             {{>contactform}}

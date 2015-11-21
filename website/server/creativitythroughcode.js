@@ -1,4 +1,8 @@
 if (Meteor.isClient) {
+
+  Template.about.rendered = new WOW().init()
+
+
   // counter starts at 0
   Session.setDefault('counter', 0);
 

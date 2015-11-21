@@ -1,0 +1,66 @@
+<html>
+    <body>
+    <script>
+        var fun = function (a, b) {
+            console.log("A is equal to " +a);
+            console.log("B is equal to " +b);
+            return a / b;
+        }
+        var fun2 = function (a) {
+            return a*a
+        }
+        console.log(fun(10, 0));
+        console.log("Hello World");
+        
+        var x = 10;
+        var y = 2
+        
+        console.log(x+y);
+        console.log(x-y);
+        console.log(x*y);
+        console.log(x/y);
+        
+        console.log ("This is an integer " + 1);
+        console.log ("This is a float" + 1.1);
+        console.log("This is a boolean " + true + " " + false);
+        
+        console.log(5 + " is greater/equal than " + 5 + "? " + (5 >= 5));
+        console.log(x + "is less than " + y + "? " +(x<=y));
+        console.log(x + "is equal " + y + "? " + (x === y));
+
+
+        
+        if (x === 10) {
+            console.log ("x is equal to 2");
+        } else if (y === 2) {
+            console.log ("Y is equal to 2");
+        } else {
+            console.log ("X isn't equal to 10 and Y isn't equal to 2")
+        }
+        
+        var cnt =0;
+        /*
+        while (cnt <20) {
+             cnt = cnt +1
+             console.log (cnt);
+        }
+        
+        for (var i = 0; j = 0; i<20; i++) { 
+        console.log { =" " + j);
+        }
+        */
+        
+        var a = [1, 2.1, true];
+        var b = ["this is a string", false, 11];
+        
+        var c = a + b;
+        var str = "this is a string";
+                 for (var index = 0; index < a.length; index++) {
+                    console.log(a[index]);
+                }
+        for (var index = 0; index < str.length; index++) {
+            console.log(str[index]);
+        }
+    </script>
+        </body>
+</html>
