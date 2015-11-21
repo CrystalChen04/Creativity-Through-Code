@@ -38,7 +38,7 @@ body {
 
 @media (min-width:800px){  
  .container{
-  width:98vwpx  
+  width:100vwpx
 }   
 }
 
@@ -74,6 +74,7 @@ footer{
     background-color:#E0FFFF;
     min-height:80px;
     margin-top: 40px;
+    text-align: left;
 }
 footer ul li{
     list-style: none;
@@ -92,8 +93,4 @@ footer .row{
     fontsize: 20px;
 }
 }
-}
-
-.hi {
-    padding:30px 30px 30px;
 }

@@ -105,6 +105,25 @@
     </div>
     </nav>
 </template>
+<template name= "converter">
+       <script type="text/javascript">
+        var cadToUsdRate = 0.75; 
+        var usdToCadRate = 1.33;
+        var exchangerates = [cadToUsdRate, usdToCadRate];
+        function exchange(principle, currency){ //principle is original amount of currency whereas currency is the exchange that is being calculated (i.e the exchange rate)
+            return principle*exchangerates[currency];
+        }
+    </script>
+    <form>
+    <input type="text" class="form-control" placeholder="Principle">
+        <select class="form-control">
+            <option>cad to usd</option>
+            <option>usd to cad</option>
+         </select>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+        
+</template>
 
 <template name="footer">
 <footer>

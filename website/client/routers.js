@@ -17,3 +17,8 @@ Router.route('/messages', {
     template: 'messages',
     title: 'CTC - messages'
 });
+
+Router.route('/converter', {
+    template: 'converter',
+    title: 'CTC - converter'
+});
