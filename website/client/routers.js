@@ -22,3 +22,8 @@ Router.route('/converter', {
     template: 'converter',
     title: 'CTC - converter'
 });
+
+Router.route('/math', {
+    template: 'math',
+    title: 'CTC - math'
+});
