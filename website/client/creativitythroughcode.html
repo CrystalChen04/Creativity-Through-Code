@@ -8,15 +8,18 @@
   <p>You've pressed the button {{counter}} times.</p>
 </template>
 
+
+
+
+
+
 <template name = "about">
     {{>navbar}}
     <body>
 		<div class = "top">
 
-				<img src = "http://theartmad.com/wp-content/uploads/2015/05/Baby-Winnie-The-Pooh-With-Honey-4.png">
-
 			<div>
-				<div class= "wow tada"><h1>Welcome to our page!</h1></div>
+				<div class= "wow tada"><h1 style= "padding-top: 45vh">Welcome to our page!</h1></div>
            <h2>DESCRIPTION!</h2>
 			</div>
 		</div>
@@ -35,14 +38,34 @@
 			       <div class = "col-md-4 col-xs-12" style = "border-style:solid;">
 				        <a href= "/gallery"><h2>Pictures</h2></a> 
 				        <p> Description <div>
-                <img class= "img-responsive-center" src= "smiley-face-emoji-1258187.gif" style= "height:150px; padding-top:20px;">
+                <img class= "img-responsive-center" src= "" style= "height:150px; padding-top:20px;">
                 </div></p>
 			       </div>
         </div>
-    
 	</body>
     {{>footer}}
 </template>
+
+
+
+
+
+
+
+<template name= "loginpage">
+    {{>navbar}}
+<div class ="row">
+    <div class ="container">
+<div class ="col-md-6 col-md-offset-3 loginPanel" style="border-bottom-style:solid;border-colour:black">
+    <div class ="col-md-4 col-md-offset-4" style="padding:30px 0px 30px 0px">
+        {{> loginButtons}} 
+    </div>
+     </div>
+    </div>
+    </div>
+</template>
+
+
 
 
 <template name = "gallery">
@@ -67,6 +90,10 @@
     </div>
     {{>footer}}
 </template>
+
+
+
+
 <template name="messages">
    {{>navbar}}
       <div class="container">
@@ -83,6 +110,9 @@
 </div>
      {{>footerversion2}}
 </template>
+
+
+
 <template name="contactform">
     <form action='https://www.getform.org/f/5aa5c267-659d-42bd-b81f-a239fefd8bad' method="POST">
         <input type="text" class="form-control" placeholder= "name" name= "name">
@@ -91,23 +121,34 @@
     <button type="submit" class="btn">Submit</button>
     </form>
 </template>
+
+
+
         
 <template name="navbar">
     <nav>
-    <div class="col-md-1 col-md-offset-7 col-xs-3">
+    <div class="col-md-1 col-md-offset-6 col-xs-2">
      <a href= "/"><h4>Home</h4></a> 
     </div>
-    <div class="col-md-1 col-xs-3">
+    <div class="col-md-1 col-xs-2">
+        <a href="/loginpage"><h4>Login</h4></a>
+    </div>
+    <div class="col-md-1 col-xs-2">
     <a href= "/gallery">  <h4>Gallery</h4> </a>
      </div>
-    <div class="col-md-1 col-xs-3">
+    <div class="col-md-1 col-xs-2">
      <a href="/messages"><h4>Messages</h4></a>
     </div>  
-   <div class="col-md-2 col-xs-3">
+   <div class="col-md-2 col-xs-2">
      <a href="/contact"><h4>Contact Us</h4></a>
     </div>
     </nav>
 </template>
+
+
+
+
+
 <template name="converter">
        <script type="text/javascript">
         var cadToUsdRate = 0.75; 
@@ -132,6 +173,8 @@
 <template name="math">
 
 </template>
+
+
 
 <template name="footer">
 <footer>
@@ -162,6 +205,8 @@
     </footer>
 </template>
       
+
+
 
 
 <template name="footerversion2">

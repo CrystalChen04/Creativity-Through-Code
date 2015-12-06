@@ -4,6 +4,11 @@ if (Meteor.isClient) {
     Session.setDefault('exchangedPrinciple',0);
     Session.setDefault('finalCurrency',0);
     
+Template.loginButtons.rendered = function()
+    {
+       Accounts._loginButtonsSession.set('dropdownVisible', true);
+   };
+    
    Template.converter.events({
     'submit .converter':function(event){
         event.preventDefault()
@@ -16,8 +21,6 @@ if (Meteor.isClient) {
         var rateSelected =event.target.direction.value;
         Session.set('exchangedPrinciple',exchange(principleValue,rateSelected));
     }
-  
-  
   
   });
 
@@ -33,8 +36,8 @@ if (Meteor.isClient) {
                  return temp;
              }
          }
-    
     });
+    
     
 Session.setDefault('val1',0);
 Session.setDefault('val2',0);

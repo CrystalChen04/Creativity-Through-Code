@@ -8,10 +8,6 @@ body {
     height: 100vh; 
     text-align: center;
 }
-.top img {
-    height: 400px;
-    padding-top: 98px;
-}
 .top div {
     padding-top: 5px;
 }
@@ -95,3 +91,60 @@ footer .row{
 }
 }
 
+.loginPanel{ 
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    border-bottom-width: 3px;
+}
+
+@media(min-width: 700px){
+.loginPanel{
+
+    margin-top: 100px;
+
+}
+}
+
+#login-email-label, #login-password-label{
+    	font-size: 20px;
+font-weight :600px;
+margin-left: 33%;
+}
+
+#login-email-label{
+margin-left: 33%;
+}
+
+#login-password-label{
+	margin-left: 23%;
+}
+
+.login-link-text, .login-close-text{
+	display:none;
+}
+
+#login-email, #login-password{
+	padding: 8px;
+	 border-radius: 6px;
+	border-width: 1px;
+}
+
+.login-button{ 
+	color:white;
+	background-color: lightcoral;
+	line-height: 2;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.login-button:hover{ 
+	opacity:
+	background-color: lightcoral;
+	line-height: 2;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 4px;
+    
+}

@@ -1,29 +1,54 @@
 Router.route('/', {
-    template: 'about',
-    title: 'CTC - about'
+onBeforeAction: function(){
+        this.render('about');
+    }
 });
 
 Router.route('/gallery', {
-    template: 'gallery',
-    title: 'CTC - gallery'
+onBeforeAction: function(){
+    var currentUser = Meteor.userId();
+    if(currentUser){
+        this.render('gallery');
+    }else {
+        this.render('loginpage');
+    } 
+}
 });
 
 Router.route('/contact', {
-    template: 'contact',
-    title: 'CTC - contact'
+onBeforeAction: function(){
+    var currentUser = Meteor.userId();
+    if(currentUser){
+        this.render('contact');
+    } else {
+        this.render('loginpage');
+    } 
+}
 });
 
 Router.route('/messages', {
-    template: 'messages',
-    title: 'CTC - messages'
+onBeforeAction: function(){
+    var currentUser = Meteor.userId();
+    if(currentUser){
+        this.render('messages');
+    }else {
+        this.render('loginpage');
+    } 
+}
 });
 
 Router.route('/converter', {
-    template: 'converter',
-    title: 'CTC - converter'
+onBeforeAction: function(){
+    var currentUser = Meteor.userId();
+    if(currentUser){
+        this.render('converter');
+    }else {
+        this.render('loginpage');
+    } 
+}
 });
 
-Router.route('/math', {
-    template: 'math',
-    title: 'CTC - math'
+Router.route('/loginpage', {
+    template: 'loginpage',
+    title: 'CTC - loginpage'
 });

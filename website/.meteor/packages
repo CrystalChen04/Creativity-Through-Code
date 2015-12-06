@@ -21,3 +21,5 @@ insecure                # Allow all DB writes from clients (for prototyping)
 twbs:bootstrap
 iron:router
 timmyg:wow
+accounts-password
+accounts-ui-unstyled
