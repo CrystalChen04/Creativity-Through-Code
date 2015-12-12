@@ -1,54 +1,40 @@
-Router.route('/', {
+Router.route('/about', {
 onBeforeAction: function(){
+    var currentUser = Meteor.userId();
+    if(currentUser){
         this.render('about');
-    }
+    }else {
+        this.render('login');
+    } 
+}
 });
 
 Router.route('/gallery', {
-onBeforeAction: function(){
-    var currentUser = Meteor.userId();
-    if(currentUser){
-        this.render('gallery');
-    }else {
-        this.render('loginpage');
-    } 
-}
+  template: 'gallery',
+    title: 'CTC - gallery'
 });
 
 Router.route('/contact', {
-onBeforeAction: function(){
-    var currentUser = Meteor.userId();
-    if(currentUser){
-        this.render('contact');
-    } else {
-        this.render('loginpage');
-    } 
-}
+  template: 'contact',
+    title: 'CTC - contact'
 });
-
 Router.route('/messages', {
-onBeforeAction: function(){
-    var currentUser = Meteor.userId();
-    if(currentUser){
-        this.render('messages');
-    }else {
-        this.render('loginpage');
-    } 
-}
+  template: 'messages',
+    title: 'CTC - messages'
 });
 
 Router.route('/converter', {
-onBeforeAction: function(){
-    var currentUser = Meteor.userId();
-    if(currentUser){
-        this.render('converter');
-    }else {
-        this.render('loginpage');
-    } 
-}
+  template: 'converter',
+    title: 'CTC - converter'
 });
 
-Router.route('/loginpage', {
-    template: 'loginpage',
-    title: 'CTC - loginpage'
+Router.route('/', {
+    template: 'login',
+    title: 'CTC - login'
+});
+
+
+Router.route('/logout', {
+     template: 'logout',
+    title: 'CTC - logout'
 });

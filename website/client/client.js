@@ -1,8 +1,21 @@
+Posts = new Meteor.Collection('posts');
+
+
 if (Meteor.isClient) {
     //counter starts at 0
     Session.setDefault('counter', 0);
     Session.setDefault('exchangedPrinciple',0);
     Session.setDefault('finalCurrency',0);
+    
+
+    
+    Template.gallery.helpers({
+
+    posts: function(){
+      return Posts.find();
+    }
+
+  });
     
 Template.loginButtons.rendered = function()
     {
@@ -67,12 +80,8 @@ Session.setDefault('score',0);
     }
   });
 }
- 
-
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
   });
 }
-
-

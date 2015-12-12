@@ -9,35 +9,27 @@
 </template>
 
 
-
-
-
-
 <template name = "about">
     {{>navbar}}
     <body>
 		<div class = "top">
 
 			<div>
-				<div class= "wow tada"><h1 style= "padding-top: 45vh">Welcome to our page!</h1></div>
+				<div class= "wow tada"><h1 style= "padding-top: 45vh">Blog About it!</h1></div>
            <h2>DESCRIPTION!</h2>
 			</div>
 		</div>
-			<div style="background-color:white; text-align: center">
-				<h1 style= "font-weight: 100"> Features </h1>
-			</div>
-
             <div class = "featurecontents">
 			       <div class = "col-md-4 col-xs-6" style = " border-style:solid; padding-bottom:160px">
-				           <h2>About Us</h2> 
-				          <p> Description</p>
+				           <h2>Blog Profile</h2> 
+				          <p>This is YOUR space to document your life and daily experiences.</p>
 			       </div>
-		        <div class = "col-md-4 col-xs-6" style = "border-style:solid; padding-bottom:160px"> <a href= "http://www.facebook.com" target="_blank"> <h2>Messages</h2></a>
-				          <p>Contact your friends within seconds!</p>
+		        <div class = "col-md-4 col-xs-6" style = "border-style:solid; padding-bottom:180px"> <h2></h2>
+				          <p></p>
             </div>
 			       <div class = "col-md-4 col-xs-12" style = "border-style:solid;">
-				        <a href= "/gallery"><h2>Pictures</h2></a> 
-				        <p> Description <div>
+				        <h2>Pictures</h2> 
+				        <p> Show off your newest piece of artwork, clothes and photos from your life to others.<div>
                 <img class= "img-responsive-center" src= "" style= "height:150px; padding-top:20px;">
                 </div></p>
 			       </div>
@@ -52,7 +44,22 @@
 
 
 
-<template name= "loginpage">
+<template name= "login">
+    {{>navbar2}}
+<div class ="row">
+    <div class ="container">
+<div class ="col-md-6 col-md-offset-3 loginPanel" style="border-bottom-style:solid;border-colour:black">
+    <div class ="col-md-4 col-md-offset-4" style="padding:30px 0px 30px 0px">
+        {{> loginButtons}} 
+    </div>
+     </div>
+    </div>
+    </div>
+</template>
+
+
+
+<template name= "logout">
     {{>navbar}}
 <div class ="row">
     <div class ="container">
@@ -67,7 +74,6 @@
 
 
 
-
 <template name = "gallery">
     {{>navbar}}
     <div>
@@ -75,18 +81,7 @@
         <p> Browse through your favourite pictures and relive your old memories!</p>    
     </div>
     <div class= "extra">
-     <h1> blablablablablablablablaskdajkshdjashdkashdwiejhgrhjewghjdsjfbnsdmfskasjdhjaksdjhwujewhbfsdnmfbdsjkjfhjsdkh</h1>
-    </div>
-    <div>
-        <div class= "col-md-4">
-            <h2>Picture 1</h2>
-        </div>
-        <div class= "col-md-4">
-            <h2>Picture 2</h2>
-        </div>
-        <div class= "col-md-4">
-            <h2>Picture 3</h2>  
-        </div>
+     <h1> hi</h1>
     </div>
     {{>footer}}
 </template>
@@ -103,10 +98,15 @@
         </div>
     {{>footer}}
  </template>
+
+
+
 <template name="contact">
     {{>navbar}}
-  <div class="col-md-3">
+<div class ="container">
+<div class="col-md-4 col-md-offset-4" style= "padding-top: 50px;">
     {{> contactform}}
+</div>
 </div>
      {{>footerversion2}}
 </template>
@@ -127,11 +127,31 @@
         
 <template name="navbar">
     <nav>
-    <div class="col-md-1 col-md-offset-6 col-xs-2">
-     <a href= "/"><h4>Home</h4></a> 
+    <div class="col-md-1 col-md-offset-5 col-xs-2">
+     <a href= "/about"><h4>Home</h4></a> 
     </div>
     <div class="col-md-1 col-xs-2">
-        <a href="/loginpage"><h4>Login</h4></a>
+        <a href="/logout"><h4>Logout</h4></a>
+    </div>
+    <div class="col-md-1 col-xs-2">
+    <a href= "/gallery">  <h4>Gallery</h4> </a>
+     </div>
+    <div class="col-md-1 col-xs-2">
+     <a href="/messages"><h4>Messages</h4></a>
+    </div>  
+     <div class="col-md-1 col-xs-2">
+     <a href="/blog"><h4 style="text-align: center;">Blog</h4></a>
+    </div>
+   <div class="col-md-2 col-xs-2">
+     <a href="/contact"><h4>Contact Us</h4></a>
+    </div>
+    </nav>
+</template>
+
+<template name="navbar2">
+    <nav>
+    <div class="col-md-1 col-md-offset-6 col-xs-2">
+     <a href= "/about"><h4>Home</h4></a> 
     </div>
     <div class="col-md-1 col-xs-2">
     <a href= "/gallery">  <h4>Gallery</h4> </a>
@@ -145,6 +165,11 @@
     </nav>
 </template>
 
+
+
+<template name="blog">
+<p>Blog</p>
+</template>
 
 
 
@@ -182,7 +207,7 @@
         <div class="col-md-3 col-xs-4">
             <div class="container">
                 <ul class="list" style="padding-bottom:20px">
-                    <a href="/"><li>Home</li> </a> 
+                    <a href="/about"><li>Home</li> </a> 
                     <a href="/gallery"><li>Gallery</li></a>
                     <a href="/contact"><li>Contact Us</li></a>
                     <a href="/messages"><li>Messages</li></a>
@@ -192,7 +217,7 @@
         
      <div class="col-md-5 col-xs-4">
         <h4>About Us</h4> 
-         <p> INSERT NAME HERE is an online website where users are given the opportunity to connect with their friends, ask questions and document their experiences so that the memories created will last forever. </p>
+         <p> BLOG ABOUT IT is an online website where users are given the opportunity to connect with their friends, ask questions and document their experiences so that the memories created will last forever. </p>
     </div>   
      <div class="col-md-4 col-xs-4">
          <div class= "col-md-12 contact-form-footer">
@@ -215,7 +240,7 @@
         <div class="col-md-3 col-xs-4">
             <div class="container">
                 <ul class="list" style="padding-bottom:20px">
-                    <a href="/"><li>Home</li> </a> 
+                    <a href="/about"><li>Home</li> </a> 
                     <a href="/gallery"><li>Gallery</li></a>
                     <a href="/contact"><li>Contact Us</li></a>
                     <a href="/messages"><li>Messages</li></a>
