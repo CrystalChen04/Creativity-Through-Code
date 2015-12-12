@@ -1,0 +1,249 @@
+<head>
+    <title>creativitythroughcode</title> 
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+</head>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+
+<template name = "about">
+    {{>navbar}}
+    <body>
+        <div class = "top">
+            <div>
+                <div class= "wow tada"><h1 style= "padding-top: 45vh">Memories</h1></div>
+                <h2>Description</h2>
+			</div>
+		</div>
+        <div class = "featurecontents">
+            <div class = "col-md-6 col-xs-6" style = " border-style:solid;">
+				<h2>Entries</h2> 
+				<p>This is YOUR space to document your life and daily experiences.</p>
+                 <div>
+                        <img class= "img-responsive-center" src= "" style= "height:240px; padding-top:20px;">
+                    </div>
+            </div>
+            <div class = "col-md-6 col-xs-6" style = "border-style:solid;">
+				<h2>Pictures</h2> 
+				<p> Show off your newest piece of artwork, clothes and photos from your life to others.
+                    <div>
+                        <img class= "img-responsive-center" src= "" style= "height:230px; padding-top:20px;">
+                    </div>
+                </p>
+            </div>
+        </div>
+	</body>
+    {{>footer}}
+</template>
+
+
+<template name='comments'>
+    {{#each comments}}
+      <p>{{datesubmitted}}</p>
+    <h6>{{postedcomment}}</h6>
+    {{/each}}
+<form class="new-comment">
+    <p>Comment Here</p>
+
+    <input type="text" name ="comment" placeholder="Comment">
+  
+    </form>
+    <button type="submit">Submit</button>
+</template>
+
+
+
+<template name= "login">
+    {{>navbar2}}
+<div class ="row">
+    <div class ="container">
+<div class ="col-md-6 col-md-offset-3 loginPanel" style="border-bottom-style:solid;border-colour:black">
+    <div class ="col-md-4 col-md-offset-4" style="padding:30px 0px 30px 0px">
+        {{> loginButtons}} 
+    </div>
+     </div>
+    </div>
+    </div>
+</template>
+
+
+
+<template name= "logout">
+    {{>navbar}}
+<div class ="row">
+    <div class ="container">
+<div class ="col-md-6 col-md-offset-3 loginPanel" style="border-bottom-style:solid;border-colour:black">
+    <div class ="col-md-4 col-md-offset-4" style="padding:30px 0px 30px 0px">
+        {{> loginButtons}} 
+    </div>
+     </div>
+    </div>
+    </div>
+</template>
+
+
+
+<template name = "gallery">
+    {{>navbar}}
+    <div>
+        <h1>Gallery page</h1>
+        <p> Browse through your favourite pictures and relive your old memories!</p>    
+    </div>
+    <div class= "extra">
+     <h1> hi</h1>
+    </div>
+    {{>footer}}
+</template>
+
+
+
+
+
+<template name="contact">
+    {{>navbar}}
+<div class ="container">
+<div class="col-md-4 col-md-offset-4" style= "padding-top: 50px;">
+    {{> contactform}}
+</div>
+</div>
+     {{>footerversion2}}
+</template>
+
+
+
+<template name="contactform">
+    <form action='https://www.getform.org/f/5aa5c267-659d-42bd-b81f-a239fefd8bad' method="POST">
+        <input type="text" class="form-control" placeholder= "name" name= "name">
+        <input type="email" class="form-control" placeholder= "email" name= "email">
+        <textarea class="form-control" rows="6" placeholder="message" name= "message"></textarea>
+    <button type="submit" class="btn">Submit</button>
+    </form>
+</template>
+
+
+
+        
+<template name="navbar">
+    <nav>
+    <div class="col-md-1 col-md-offset-7 col-xs-2">
+     <a href= "/about"><h4>Home</h4></a> 
+    </div>
+    <div class="col-md-1 col-xs-2">
+        <a href="/logout"><h4>Logout</h4></a>
+    </div>
+    <div class="col-md-1 col-xs-2">
+    <a href= "/gallery">  <h4>Gallery</h4> </a>
+     </div>
+   <div class="col-md-2 col-xs-2">
+     <a href="/contact"><h4>Contact Us</h4></a>
+    </div>
+    </nav>
+</template>
+
+<template name="navbar2">
+    <nav>
+    <div class="col-md-1 col-md-offset-7 col-xs-2">
+     <a href= "/about"><h4>Home</h4></a> 
+    </div>
+    <div class="col-md-1 col-xs-2">
+    <a href= "/gallery">  <h4>Gallery</h4> </a>
+     </div> 
+   <div class="col-md-2 col-xs-2">
+     <a href="/contact"><h4>Contact Us</h4></a>
+    </div>
+    </nav>
+</template>
+
+
+
+
+
+
+<template name="converter">
+       <script type="text/javascript">
+        var cadToUsdRate = 0.75; 
+        var usdToCadRate = 1.33;
+        var exchangerates = [cadToUsdRate, usdToCadRate];
+        function exchange(principle, currency){ //principle is original amount of currency whereas currency is the exchange that is being calculated (i.e the exchange rate)
+            return principle*exchangerates[currency];
+        }
+    </script>
+    <form class="converter">
+    <input type="text" class="form-control" placeholder="Principle" name="principle">
+        <select class="form-control" name="direction">
+            <option value="0">cad to usd</option>
+            <option value="1">usd to cad</option>
+         </select>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <h1>{{returnExchanged}}</h1>
+        
+</template>
+
+<template name="math">
+
+</template>
+
+
+
+<template name="footer">
+<footer>
+   <div class="row">
+        <div class="col-md-3 col-xs-4">
+            <div class="container">
+                <ul class="list" style="padding-bottom:20px">
+                    <a href="/about"><li>Home</li> </a> 
+                    <a href="/gallery"><li>Gallery</li></a>
+                    <a href="/contact"><li>Contact Us</li></a>
+                    <a href="/messages"><li>Messages</li></a>
+                </ul>
+            </div>
+         </div>
+        
+     <div class="col-md-5 col-xs-4">
+        <h4>About Us</h4> 
+         <p> Memories is an online website where users are given the opportunity to document their experiences from their everyday lives onto an online, infinite website. This allows users to never forget an important day in their life and have a place to look back on to reflect.   </p>
+    </div>   
+     <div class="col-md-4 col-xs-4">
+         <div class= "col-md-12 contact-form-footer">
+       <div class="row">
+            {{>contactform}}
+         </div>
+        </div>
+     </div> 
+     </div>
+    </footer>
+</template>
+      
+
+
+
+
+<template name="footerversion2">
+<footer>
+   <div class="row">
+        <div class="col-md-3 col-xs-4">
+            <div class="container">
+                <ul class="list" style="padding-bottom:20px">
+                    <a href="/about"><li>Home</li> </a> 
+                    <a href="/gallery"><li>Gallery</li></a>
+                    <a href="/contact"><li>Contact Us</li></a>
+                    <a href="/messages"><li>Messages</li></a>
+                </ul>
+            </div>
+         </div>
+        
+     <div class="col-md-5 col-xs-4">
+        <h4>About Us</h4> 
+         <p> INSERT NAME HERE is an online website where users are given the opportunity to connect with their friends, ask questions and document their experiences so that the memories created will last forever. </p>
+    </div>   
+     <div class="col-md-4 col-xs-4">
+          <img class= "img-responsive-center" src= "smiley-face-emoji-1258187.gif" style= "height:150px; padding-top:20px;">
+                </div>
+     </div>
+    </footer>
+</template>
+      

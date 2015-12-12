@@ -1,0 +1,151 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.top {
+    border-style:solid; 
+    background-image: url('https://images.unsplash.com/photo-1425036458755-dc303a604201?ixlib=rb-0.3.5&q=80&fm=jpg&w=1080&fit=max&s=b65fa25ae814087b2e6caa9a49d72326');
+    background-size: cover;
+    height: 100vh; 
+    text-align: center;
+}
+.top div {
+    padding-top: 5px;
+}
+.top div h1{
+    margin-bottom: 20px; 
+    font-weight: 300; 
+    color: white;
+}
+.top div h2{
+    color:white;
+    font-size: 22px;
+    text-align: center;
+}
+.top div p {
+    color: white;
+}
+.content {
+    text-align: center;
+}
+
+.featurecontents {
+    padding-bottom: 300px;
+    text-align: center;
+}
+
+nav{
+    min-height:50px;
+    background-color:darkslateblue;
+}
+
+nav div{
+    padding-top:5px;
+}
+
+nav a{
+    color:white;
+}
+
+nav a:hover{
+    color:white;
+    text-decoration: none;
+}
+
+nav a h4{
+    opacity:0.7;
+    font-size: 16px;
+}
+
+
+nav a h4:hover{
+    opacity:1;
+}
+
+footer{
+    background-color:darkslateblue;
+    min-height:80px;
+    margin-top: 40px;
+    text-align: left;
+    color: white;
+}
+footer ul li{
+    list-style: none; 
+    text-align: justify;
+    padding-left: 50px;
+    color: white;
+}
+
+footer .row{
+    background-color:darkslateblue;
+}
+.contact-form-footer{
+    padding-top: 10px;
+    padding-bottom:10px;
+    padding-left: 70px;
+    padding-right: 30px;
+}
+
+@media (max-width: 700px){
+.extra {display: none;
+    fontsize: 20px;
+}
+}
+
+.loginPanel{ 
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    border-bottom-width: 3px;
+}
+
+@media(min-width: 700px){
+.loginPanel{
+
+    margin-top: 100px;
+
+}
+}
+
+#login-email-label, #login-password-label{
+    	font-size: 20px;
+font-weight :600px;
+margin-left: 33%;
+}
+
+#login-email-label{
+margin-left: 33%;
+}
+
+#login-password-label{
+	margin-left: 23%;
+}
+
+.login-link-text, .login-close-text{
+	display:none;
+}
+
+#login-email, #login-password{
+	padding: 8px;
+	 border-radius: 6px;
+	border-width: 1px;
+}
+
+.login-button{ 
+	color:white;
+	background-color: lightcoral;
+	line-height: 2;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.login-button:hover{ 
+	opacity:
+	background-color: lightcoral;
+	line-height: 2;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 4px;
+    text-decoration:underline;
+    
+}
