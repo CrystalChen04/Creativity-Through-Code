@@ -24,7 +24,7 @@ Router.route('/converter', {
     title: 'CTC - converter'
 });
 
-Router.route('/login', {
+Router.route('/', {
     template: 'login',
     title: 'CTC - login'
 });
